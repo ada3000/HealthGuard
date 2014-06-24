@@ -42,7 +42,7 @@
 			// gbMain
 			// 
 			this.gbMain.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.gbMain.BackColor = System.Drawing.Color.CornflowerBlue;
+			this.gbMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
 			this.gbMain.Controls.Add(this.txtDate);
 			this.gbMain.Controls.Add(this.label1);
 			this.gbMain.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -80,7 +80,7 @@
 			// 
 			// pbRabbit
 			// 
-			this.pbRabbit.BackColor = System.Drawing.Color.CornflowerBlue;
+			this.pbRabbit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
 			this.pbRabbit.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.pbRabbit.Location = new System.Drawing.Point(245, 250);
 			this.pbRabbit.Name = "pbRabbit";
@@ -95,7 +95,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackgroundImage = global::HealthGuard.Properties.Resources.fon;
+			this.BackgroundImage = global::HealthGuard.Properties.Resources.fon2;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(533, 439);
 			this.Controls.Add(this.pbRabbit);

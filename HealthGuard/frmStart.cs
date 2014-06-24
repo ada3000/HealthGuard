@@ -43,6 +43,8 @@ namespace HealthGuard
 
 			F.FormClosed += Main_FormClosed;
 
+			F.Opacity = Config.MainFormOpacity;
+
             F.Show();
         }
 		/// <summary>
@@ -79,7 +81,16 @@ namespace HealthGuard
             {
                 Close();
                 return;
-            }
+            }else if (I.Name == "tsbTest")
+			{
+				Program.DoEvent();
+				return;
+			}
         }
+
+		private void CMS_Opening(object sender, CancelEventArgs e)
+		{
+
+		}
     }
 }
