@@ -1,5 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 using System.Threading;
 
@@ -43,10 +47,13 @@ namespace HealthGuard
 		[STAThread]
 		static void Main()
 		{
+
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 
 			CurDelay = BigDelay;
+
+			LoadDayImage();
 
 			mthMain = new Thread(Worker);
 			mthMain.IsBackground = true;
@@ -62,6 +69,13 @@ namespace HealthGuard
 
 			FMAIN = new frmStart();
 			Application.Run(FMAIN);
+		}
+		private static void LoadDayImage()
+		{
+			var files = Directory.GetFiles(@".\fons").OrderBy(s=>s).ToArray();
+
+			string img = files[DateTime.Now.DayOfYear % files.Length];
+			MainBGImage = new Bitmap(img);
 		}
 		static void Worker()
 		{
@@ -110,5 +124,7 @@ namespace HealthGuard
 			CurDelay = Delay;
 			mEventStart.Set();
 		}
+
+		public static Image MainBGImage { get; private set; }
 	}
 }
